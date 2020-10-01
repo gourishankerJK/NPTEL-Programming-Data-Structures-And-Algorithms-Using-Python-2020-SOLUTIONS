@@ -68,25 +68,12 @@ def delchar(s, c):
     return news
 
 
-def primeproduct(n):
-    count = 0
-    factors = []
-    for i in range(2, n + 1):
-        if n % i == 0:
-            for s in range(2, i):
-                if i % s == 0:
-                    count += 1
-            if count == 0:
-                factors.append(i)
-    flag = 0
-    for i in range(len(factors)):
-        for j in range(len(factors)):
-            if factors[i] * factors[j] == n:
-                flag = 1
-                break
-        if flag == 1:
-            break
-    if flag == 1:
-        return True
+def primeproduct(m):
+    product=1
+    for i in range(2,(m//2)+1):
+        if(m%i==0 and m>=0):
+            product*=i
+    if(product==m):
+        return(True)
     else:
-        return False
+        return(False)
