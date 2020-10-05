@@ -1,12 +1,4 @@
-"""
-Write two Python functions as specified below. Paste the text for both functions together into the submission window. Your function will be called automatically with various inputs and should return values as specified. Do not write commands to read any input or print any output.
-You may define additional auxiliary functions as needed.
-In all cases you may assume that the value passed to the function is of the expected type, so your function does not have to check for malformed inputs.
-For each function, there are normally some public test cases and some (hidden) private test cases.
-"Compile and run" will evaluate your submission against the public test cases.
-"Submit" will evaluate your submission against the hidden private test cases. There are 10 private test cases, with equal weightage. You will get feedback about which private test cases pass or fail, though you cannot see the actual test cases.
-Ignore warnings about "Presentation errors".
-Write a Python function frequency(l) that takes as input a list of integers and returns a pair of the form (minfreqlist,maxfreqlist) where
+"""Write a Python function frequency(l) that takes as input a list of integers and returns a pair of the form (minfreqlist,maxfreqlist) where
 
 minfreqlist is a list of numbers with minimum frequency in l, sorted in ascending order
 maxfreqlist is a list of numbers with maximum frequency in l, sorted in ascending order
@@ -59,7 +51,7 @@ def frequency(l):
   return (sorted(minii),sorted(maxii))
 
 
-  
+
 def onehop(l):
     li =[]
     for i in range(len(l)):
