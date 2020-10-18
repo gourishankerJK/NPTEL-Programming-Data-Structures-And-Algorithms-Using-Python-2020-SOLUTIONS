@@ -67,26 +67,20 @@ def delchar(s, c):
             news += i
     return news
 
+def isprime(n):
+    if n%2 == 0 and n!=2 or n == 1:
+        return False
+    if n % 3 == 0 and n == 3:
+        return True
+    else :
+        for i in range(3,((n+1)//2),2):
+            if n % i == 0:
+                return False
+        return True
 
 def primeproduct(n):
-    count = 0
-    factors = []
-    for i in range(2, n + 1):
-        if n % i == 0:
-            for s in range(2, i):
-                if i % s == 0:
-                    count += 1
-            if count == 0:
-                factors.append(i)
-    flag = 0
-    for i in range(len(factors)):
-        for j in range(len(factors)):
-            if factors[i] * factors[j] == n:
-                flag = 1
-                break
-        if flag == 1:
-            break
-    if flag == 1:
-        return True
-    else:
-        return False
+    for i in range(2,(n+2)//2):
+        if n % i == 0 :
+            if isprime(i) and isprime(n//i):
+                return True
+    return False
